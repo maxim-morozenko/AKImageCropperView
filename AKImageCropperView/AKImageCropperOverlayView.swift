@@ -39,8 +39,8 @@ open class AKImageCropperOverlayView: UIView {
     /** Crop rectangle */
     
     open var cropRect: CGRect = .zero
-    var ratioX:CGFloat = 1
-    var ratioY:CGFloat = 1
+    var ratioX:CGFloat = 0
+    var ratioY:CGFloat = 0
     
     /** Saved crop rectangle state */
     
