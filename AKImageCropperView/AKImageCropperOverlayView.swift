@@ -853,6 +853,8 @@ open class AKImageCropperOverlayView: UIView {
             cropRect.size.width = cropRect.size.height * ratioX/ratioY;
         }
         /* Update UI for the crop rectange */
+        let newContentOffsetX = (self.cropperView.scrollView.contentSize.width/2) - (self.cropperView.scrollView.bounds.size.width/2);
+        self.cropperView.scrollView.contentOffset = CGPoint(x: newContentOffsetX, y: 0)
         
         layoutSubviews()
         
