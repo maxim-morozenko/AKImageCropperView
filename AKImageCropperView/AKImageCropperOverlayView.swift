@@ -489,7 +489,7 @@ open class AKImageCropperOverlayView: UIView {
             return
         }
         
-        let animations: () -> Void = { 
+        let animations: () -> Void = {
             self.gridView.alpha = show ? 1 : 0
         }
         
@@ -858,6 +858,12 @@ open class AKImageCropperOverlayView: UIView {
         
         /* Delegates */
         
+        delegate?.cropperOverlayViewDidChangeCropRect(self, cropRect)
+    }
+    open func clearFixedRatio() {
+        self.ratioX = 0;
+        self.ratioY = 0;
+        layoutSubviews()
         delegate?.cropperOverlayViewDidChangeCropRect(self, cropRect)
     }
     
