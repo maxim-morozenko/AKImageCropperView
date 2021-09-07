@@ -860,7 +860,8 @@ open class AKImageCropperOverlayView: UIView {
         
         delegate?.cropperOverlayViewDidChangeCropRect(self, cropRect)
     }
-    open func clearFixedRatio() {
+    
+    open func clearFixedRatio(){
         self.ratioX = 0;
         self.ratioY = 0;
         layoutSubviews()
